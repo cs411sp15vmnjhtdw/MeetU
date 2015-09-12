@@ -5,4 +5,4 @@
 Name | Email | Phone Number
 ---- | ----- | ------------
 Vassil Mladenov | | 
-Neville Jos | josneville@yahoo.com | (954) 415-3337
+Neville Jos | njos2@illinois.edu | (954) 415-3337
