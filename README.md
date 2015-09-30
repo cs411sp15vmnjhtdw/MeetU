@@ -20,7 +20,7 @@ brew install mysql
 mysql.server start
 
 mysql -u root
-CREATE DATABASE cs411
+CREATE DATABASE cs411;
 exit
 
 pip install virtualenv
