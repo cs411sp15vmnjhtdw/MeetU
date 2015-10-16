@@ -15,10 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-
-from meetu import views
+from meetu import urls as meetu_urls
 
 urlpatterns = [
-    url(r'^/*', include('meetu.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^/*', include(meetu_urls)),
 ]
