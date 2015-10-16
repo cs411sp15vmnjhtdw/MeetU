@@ -25,8 +25,7 @@ exit
 
 pip install virtualenv
 source venv/bin/activate
-pip install django
-pip install mysql-python
+pip install -r requirements
 python manage.py migrate
 python manage.py runserver
 ```
