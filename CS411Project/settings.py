@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'CS411Project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'CS411',
+        'NAME': os.getenv('MYSQL_DB', 'CS411'),
         'HOST': os.getenv('MYSQL_HOST', 'localhost'),
         'USER': os.getenv('MYSQL_USER', 'root'),
         'PASSWORD': os.getenv('MYSQL_PASS', '')

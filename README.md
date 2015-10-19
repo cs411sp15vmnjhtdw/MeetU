@@ -20,13 +20,12 @@ brew install mysql
 mysql.server start
 
 mysql -u root
-CREATE DATABASE cs411
+CREATE DATABASE cs411;
 exit
 
 pip install virtualenv
 source venv/bin/activate
-pip install django
-pip install mysql-python
+pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 ```
