@@ -23,7 +23,11 @@ mysql -u root
 CREATE DATABASE cs411;
 exit
 
-pip install virtualenv
+(if necessary)
+sudo easy_install pip
+sudo pip install virtualenv
+
+virtualenv venv
 source venv/bin/activate
 pip install -r requirements.txt
 python manage.py migrate
