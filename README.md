@@ -14,8 +14,8 @@ Hubert Theodore | htheodo2@illinois.edu | (510) 590-1839
 Make sure you have pip installed. And then go into your code directory and enter the following:
 
 ```
-git clone https://github.com/cs411sp15vmnjhtdw cs411project
-cd cs411project
+git clone https://github.com/cs411sp15vmnjhtdw/MeetU.git
+cd MeetU
 brew install mysql
 mysql.server start
 
