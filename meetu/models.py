@@ -5,6 +5,10 @@ class University(models.Model):
     state = models.CharField(max_length=2)
     city = models.CharField(max_length=50)
 
+class EmailDomain(models.Model):
+    domain = models.CharField(max_length=50)
+    university = models.ForeignKey(University)
+
 class Student(models.Model):
     gender = models.BooleanField()
     birthdate = models.DateField()
@@ -15,20 +19,16 @@ class Student(models.Model):
     gender_preference = models.IntegerField()
 
 class Photo(models.Model):
-	url = models.CharField(, max_length=200)
+	url = models.CharField(max_length=200)
 	student = models.ForeignKey(Student)
 
 class Likes(models.Model):
-	liker = models.ForeignKey(Student)
-	likee = models.ForeignKey(Student)
+	liker = models.ForeignKey(Student, related_name="liker")
+	likee = models.ForeignKey(Student, related_name="likee")
 
 class Dislikes(models.Model):
-	disliker = models.ForeignKey(Student)
-	dislikee = models.ForeignKey(Student)
-
-class EmailDomain(models.Model):
-    domain = models.CharField(, max_length=50)
-    university = models.ForeignKey(University)
+	disliker = models.ForeignKey(Student, related_name="disliker")
+	dislikee = models.ForeignKey(Student, related_name="dislikee")
 
 class Color(models.Model):
     hex_color = models.IntegerField()
