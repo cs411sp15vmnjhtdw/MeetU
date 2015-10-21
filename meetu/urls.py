@@ -6,4 +6,5 @@ from . import controllers
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^universities/$', controllers.universities.index, name='index'),
+    url(r'^universities/(?P<id>[0-9]+)/$', controllers.universities.specific, name='specific'),
 ]
