@@ -17,6 +17,11 @@ angular
         // controller: 'BaseCtrl',
         // controllerAs: 'base'
       })
+      .when('/university', {
+        templateUrl: '/static/views/university.html'
+        // controller: 'BaseCtrl',
+        // controllerAs: 'base'
+      })
       .otherwise({
         redirectTo: '/'
       });
