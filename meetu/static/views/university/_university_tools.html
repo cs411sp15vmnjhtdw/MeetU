@@ -1,22 +1,30 @@
 <div class="row">
 
-  <div id="university-insert" class="jumbotron col-md-12">
+  <div id="university-insert" class="jumbotron col-md-12 row">
     <h2>Insert new university</h2>
     <br/>
-    <label>Name:</label>
-    <br/>
-    <input id="university-insert-input-name">
-    <br/>
-    <label>City:</label>
-    <br/>
-    <input id="university-insert-input-city">
-    <br/>
-    <label>State:</label>
-    <br/>
-    <input id="university-insert-input-state">
-    <br/>
-    <br/>
-    <button id="university-insert-submit" class="btn">Submit</button> 
+
+    <div class="col-md-3">
+      <label>Name:</label>
+      <br/>
+      <input id="university-insert-input-name">
+    </div>
+
+    <div class="col-md-3 col-md-offset-1">
+      <label>City:</label>
+      <br/>
+      <input id="university-insert-input-city">
+    </div>
+
+    <div class="col-md-3 col-md-offset-1">
+      <label>State:</label>
+      <br/>
+      <input id="university-insert-input-state">
+    </div>
+
+    <div class="col-md-4">
+      <button id="university-insert-submit" class="btn btn-success">Submit</button> 
+    </div>
   </div>
 
   <div id="university-show" class="jumbotron col-md-12">
@@ -38,21 +46,17 @@
           <td>{{university.fields.city}}</td>
           <td>{{university.fields.state}}</td>
           <td>
-            <button class="btn">
-              <a href="/universities/{{university.pk}}" target="_blank" class="btn">
+              <a href="/universities/{{university.pk}}" target="_blank" class="btn btn-info">
                 View
               </a>
-            </button>
           </td>
           <td>
-            <button class="btn">
-              <a href="/#/university/update/{{university.pk}}" target="_blank" class="btn">
+              <a href="/#/university/update/{{university.pk}}" target="_blank" class="btn btn-success">
                 Update
               </a>
-            </button>
           </td>
           <td ng-click="deleteUniversity(university.pk)">
-            <button class="btn">
+            <button class="btn btn-danger">
               Delete
             </button>
           </td>
