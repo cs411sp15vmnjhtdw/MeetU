@@ -38,7 +38,8 @@ angular.module('meetUApp')
                     url: '/universities/' + universityId,
                     // headers: {'Content-Type': 'application/x-www-form-urlencoded'},
                 }).success(function(data) {
-                        console.log("Success deleting an enrty!");
+                        scope.getUniversities();
+                        console.log("Success deleting an entry!");
                         console.log(data);
                 }).error(function(data) {
                         console.log('Oh no! An error! Error status: ' + status);
