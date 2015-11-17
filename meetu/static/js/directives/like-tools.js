@@ -16,9 +16,11 @@ angular.module('meetUApp')
             postNewLike = function(isLiked) {
                 return function() {
                     newLike = {
-                            liker: "me",
-                            likee: scope.likees[scope.currentLikeeIndex].id,
-                            like: isLiked
+                            liker: 1,
+                            likee: 2,
+                            // liker: "me",
+                            // likee: scope.likees[scope.currentLikeeIndex].id,
+                            liked: isLiked
                         }
                     $http({
                             method: 'POST',
@@ -26,9 +28,8 @@ angular.module('meetUApp')
                             data: $.param(newLike),
                             headers: {'Content-Type': 'application/x-www-form-urlencoded'},
                         }).success(function(data) {
-                                scope.getUniversities();
                                 scope.currentLikeeIndex++;
-                                if (currentLikeeIndex === likees.length) {
+                                if (scope.currentLikeeIndex === scope.likees.length) {
                                     scope.currentLikeeIndex = 0;
                                     scope.getLikees;
                                 }
