@@ -19,15 +19,14 @@ def create(request):
     body = QueryDict(request.body)
 
     if body["liker"] and body["likee"] and body["liked"]:
-        liker = Student.objects.get(id=body["liker"])
         try:
             liker = Student.objects.get(id=body["liker"])
-        except SomeModel.DoesNotExist:
+        except Student.DoesNotExist:
             return HttpResponse("Database error, current user (liker) not in database")
 
         try:
             likee = Student.objects.get(id=body["likee"])
-        except SomeModel.DoesNotExist:
+        except Student.DoesNotExist:
             return HttpResponse("Database error, target user (likee) not in database")
         
         if (body["liked"] == "true"):
