@@ -13,9 +13,9 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: '/static/views/base.html'
-        // controller: 'BaseCtrl',
-        // controllerAs: 'base'
+        templateUrl: '/static/views/like/base.html',
+        controller: 'LikeCtrl',
+        controllerAs: 'like'
       })
       .when('/university', {
         templateUrl: '/static/views/university/base.html',
