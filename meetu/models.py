@@ -19,16 +19,13 @@ class Student(models.Model):
     gender_preference = models.IntegerField()
 
 class Photo(models.Model):
-	url = models.CharField(max_length=200)
-	student = models.ForeignKey(Student)
+    url = models.CharField(max_length=200)
+    student = models.ForeignKey(Student)
 
 class Likes(models.Model):
-	liker = models.ForeignKey(Student, related_name="liker")
-	likee = models.ForeignKey(Student, related_name="likee")
-
-class Dislikes(models.Model):
-	disliker = models.ForeignKey(Student, related_name="disliker")
-	dislikee = models.ForeignKey(Student, related_name="dislikee")
+    liker = models.ForeignKey(Student, related_name="liker")
+    likee = models.ForeignKey(Student, related_name="likee")
+    liked = models.BooleanField()
 
 class Color(models.Model):
     hex_color = models.IntegerField()
