@@ -8,11 +8,21 @@
  */
 angular
   .module('meetUApp', [
-    'ngRoute'
+    'ngRoute',
+    'ngFileUpload',
+    'ngImgCrop'
   ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
+        templateUrl: '/static/views/home.html'
+      })
+      .when('/profile', {
+        templateUrl: '/static/views/profile/base.html',
+        controller: 'ProfileCtrl',
+        controllerAs: 'profile'
+      })
+      .when('/like', {
         templateUrl: '/static/views/like/base.html',
         controller: 'LikeCtrl',
         controllerAs: 'like'
