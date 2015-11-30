@@ -26,10 +26,3 @@ class Likes(models.Model):
     liker = models.ForeignKey(Student, related_name="liker")
     likee = models.ForeignKey(Student, related_name="likee")
     liked = models.BooleanField()
-
-class Color(models.Model):
-    hex_color = models.IntegerField()
-
-class Spirit(models.Model):
-    university = models.ForeignKey(University)
-    color = models.ForeignKey(Color)
