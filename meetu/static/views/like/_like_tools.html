@@ -1,10 +1,26 @@
 <div class="row">
 
   <div id="like" class="jumbotron col-md-12">
+
     <div class="col-md-12 like-picture-container">
+
       <div id="like-picture-image">
+        <div ng-repeat="photo in likees[currentLikeeIndex].photos" ng-show="photo.visible">
+              <img class="img-responsive" ng-cloak ng-src="{{photo}}">
+        </div>
+
+        <div class="arrows">
+            <a href="" ng-click="prev()">
+                Prev
+            </a>
+            <a href="" ng-click="next()">
+                Next
+            </a>
+        </div>
       </div>
+
     </div>
+    
     <div class="col-md-6 col-md-offset-6" id="like-profile">
       {{likees[currentLikeeIndex].name}}, {{likee[currentLikeeIndex].major}}
     </div>
