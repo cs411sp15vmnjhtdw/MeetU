@@ -1,0 +1,42 @@
+<div class="jumbotron">
+  <form novalidate class="profile-form">
+    First Name: <input type="text" ng-model="user.first_name" /><br />
+    Last Name: <input type="text" ng-model="user.last_name" /><br />
+    University: <select ng-model="user.email_domain">
+    <option ng-repeat="university in universities" value="{{university.pk}}">{{university.fields.name}}</option></select><br />
+    School Email: <input type="text" ng-model="user.username" /><br />
+    Password: <input type="password" ng-model="user.password" /><br />
+    Date of birth: <input type="date" ng-model="user.birthdate" /><br />
+    Gender: <input type="radio" ng-model="user.gender" value="true" />male
+    <input type="radio" ng-model="user.gender" value="false" />female<br />
+    <br />
+    <div>
+        <div>Crop Image and Upload</div>
+        <div style="color:red">Please crop the picture so that other users can see your face and you are the only person in the picture.</div>
+        <div class="btn btn-success" ngf-select ng-model="picFile" accept="simage/*">
+            Select Picture</div>
+        <div ngf-drop ng-model="picFile" ngf-pattern="image/*"
+             class="cropArea">
+            <img-crop image="picFile  | ngfDataUrl" area-type="square"              
+            result-image="user.image" ng-init="user.image=''">
+            </img-crop>
+        </div>
+        <div>
+            <img id="cropped-image-signup" ng-src="{{user.image}}" />
+        </div>
+        <!-- div class="btn btn-success" ng-click="upload(user.image)">Submit</div>  -->
+            
+        <!-- <span class="progress" ng-show="progress >= 0">
+          <div style="width:{{progress}}%" ng-bind="progress + '%'"></div>
+        </span>
+        <span ng-show="result">Upload Successful</span>
+        <span class="err" ng-show="errorMsg">{{errorMsg}}</span> -->
+    </div>
+
+
+
+    <div class="btn btn-success" ng-click="signup(user)" value="Save">
+      Submit
+    </div>
+  </form>
+</div>

@@ -1,0 +1,68 @@
+<div class="row">
+
+  <div id="university-insert" class="jumbotron col-md-12">
+    <h2>Insert new university</h2>
+    <br/>
+
+    <div class="col-md-3">
+      <label>Name:</label>
+      <br/>
+      <input id="university-insert-input-name">
+    </div>
+
+    <div class="col-md-3 col-md-offset-1">
+      <label>City:</label>
+      <br/>
+      <input id="university-insert-input-city">
+    </div>
+
+    <div class="col-md-3 col-md-offset-1">
+      <label>State:</label>
+      <br/>
+      <input id="university-insert-input-state">
+    </div>
+
+    <div class="col-md-4">
+      <button id="university-insert-submit" class="btn btn-success">Submit</button> 
+    </div>
+  </div>
+
+  <div id="university-show" class="jumbotron col-md-12">
+    <h2>University list:</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>City</th>
+          <th>State</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="university in universities">
+          <td>{{university.fields.name}}</td>
+          <td>{{university.fields.city}}</td>
+          <td>{{university.fields.state}}</td>
+          <td>
+              <a href="/universities/{{university.pk}}" target="_blank" class="btn btn-info">
+                View
+              </a>
+          </td>
+          <td>
+              <a href="/#/university/update/{{university.pk}}" target="_blank" class="btn btn-success">
+                Update
+              </a>
+          </td>
+          <td ng-click="deleteUniversity(university.pk)">
+            <div class="btn btn-danger">
+              Delete
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

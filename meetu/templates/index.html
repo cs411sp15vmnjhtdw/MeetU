@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MeetU</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/home.css" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  <body ng-app="meetUApp">
+
+    <header id="header">
+
+      <!-- Logo -->
+        <h1 id="logo"><a href="#/">MeetU</a></h1>
+
+      <!-- Nav -->
+        <nav id="nav">
+          <ul>
+            <li><a href="#/like">Like</a></li>
+            <!-- <li><a href="#/university">University</a></li> -->
+            <li><a href="#/match">Match</a></li>
+            <li><a href="#/profile">Profile</a></li>
+          </ul>
+        </nav>
+
+    </header>
+
+
+<!--     <div class="page-header text-center">
+      <h1>MeetU <br/><small>Mingle with University friends</small></h1>
+    </div> -->
+
+
+    <div>
+      <div ng-view=""></div>
+    </div>
+
+    <footer id="footer">
+
+        <!-- Icons -->
+            <ul class="actions">
+                <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+                <li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+                <li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
+                <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+            </ul>
+
+        <!-- Menu -->
+            <ul class="menu">
+                <li>&copy; MeetU CS411 Project</li>
+            </ul>
+
+    </footer>
+
+        <!-- remote js libraries -->
+        <script src="//code.jquery.com/jquery-2.1.4.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+
+        <!-- local js libraries -->
+        <script src="/static/js/resources/jquery.poptrox.min.js"></script>
+        <script src="/static/js/resources/jquery.scrolly.min.js"></script>
+        <script src="/static/js/resources/jquery.scrollex.min.js"></script>
+        <script src="/static/js/resources/cascade.js"></script>
+        <script src="/static/js/resources/ccv.js"></script>
+        <script src="/static/js/resources/facecount.js"></script>
+        <script src="/static/js/resources/skel.min.js"></script>
+        <script src="/static/js/resources/util.js"></script>
+        <script src="/static/js/resources/ng-file-upload.js"></script>
+        <script src="/static/js/resources/ng-img-crop.js"></script>
+
+        <script src="/static/js/app.js"></script>
+        <script src="/static/js/animation.js"></script>
+
+        <script src="/static/js/controllers/home.js"></script>
+
+        <script src="/static/js/controllers/match.js"></script>
+        <script src="/static/js/services/match.js"></script>
+
+        <script src="/static/js/controllers/university.js"></script>
+        <script src="/static/js/directives/university-tools.js"></script>
+        <script src="/static/js/directives/university-update.js"></script>
+        <script src="/static/js/directives/authentication-form.js"></script>
+        <script src="/static/js/services/university.js"></script>
+
+        <script src="/static/js/controllers/signup.js"></script>
+        <script src="/static/js/directives/signup-tools.js"></script>
+
+        <script src="/static/js/controllers/like.js"></script>
+        <script src="/static/js/directives/like-tools.js"></script>
+        <script src="/static/js/services/like.js"></script>
+
+        <script src="/static/js/controllers/profile.js"></script>
+        <script src="/static/js/directives/profile-tools.js"></script>
+
+</body>
+</html>
